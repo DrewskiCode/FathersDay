@@ -1,4 +1,6 @@
-# Cloudflare Pages — build runs from game/; deploy the Vite output folder.
+# Cloudflare Workers static site — build runs from game/; deploy dist/ as assets.
 name = "pyro-pyro"
 compatibility_date = "2024-09-23"
-pages_build_output_dir = "dist"
+
+[assets]
+directory = "./dist"
