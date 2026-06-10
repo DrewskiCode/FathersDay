@@ -1,25 +1,51 @@
-Stella is a multi-platform Atari 2600 VCS emulator which allows you to
-play all of your favourite Atari 2600 games on your PC.  You'll find the
-Stella Users Manual in the docs subdirectory.  If you'd like to verify
-that you have the latest release of Stella, visit the Stella Website at:
+# Pyro Pyro
 
-  [stella-emu.github.io](https://stella-emu.github.io)
+A Father's Day gift game — you play as **Pyro**, a senior programmer extinguishing office fires before the building explodes.
 
-Enjoy,
+**Active target:** browser game (TypeScript + Canvas), *Adventure*-style rooms and retro aesthetic.
 
-The Stella Team
+The original Atari 2600 / Melody Board assembly lives in [`legacy-atari/`](legacy-atari/) for reference.
 
-# Reporting issues
+## Quick start (browser)
 
-Please check the list of known issues first (see below) before reporting new ones.
-If you encounter any issues, please open a new issue on the project
-[issue tracker](https://github.com/stella-emu/stella/issues).
+```bash
+cd game
+npm install
+npm run dev
+```
 
-Note: Please do **not** report issues regarding platforms other than PC and RetroN 77 
-(e.g. Libretro) here. The Stella Team is not responsible for these forks and cannot 
-help with them.
+Open the URL Vite prints (usually `http://localhost:5173`).
 
-# Known issues
+### Build for deployment
 
-Please check out the [issue tracker](https://github.com/stella-emu/stella/issues) for
-a list of all currently known issues.
+```bash
+cd game
+npm run build
+```
+
+Static files land in `game/dist/`. Host on GitHub Pages, Netlify, or open `game/dist/index.html` locally.
+
+## Project layout
+
+```
+FathersDay/
+  SPEC.md              Game design spec (browser target)
+  game/                Browser game (TypeScript, Vite, Canvas)
+    src/               Game source
+    dist/              Production build (after npm run build)
+  docs/                Architecture and roadmap (web edition)
+  legacy-atari/        Archived 6502 / Stella / cartridge build
+```
+
+## Documentation
+
+| Doc | Purpose |
+|-----|---------|
+| [SPEC.md](SPEC.md) | Story, gameplay, rooms, fire rules, milestones |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Web app structure |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | Development milestones |
+| [legacy-atari/README.md](legacy-atari/README.md) | Original cartridge build |
+
+## License
+
+Game code: TBD.

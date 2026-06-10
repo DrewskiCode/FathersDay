@@ -1,0 +1,17 @@
+# Browser game
+game/node_modules/
+game/dist/
+
+# Legacy Atari build
+legacy-atari/dist/
+*.bin
+*.lst
+*.o
+a.out
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
