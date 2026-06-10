@@ -25,6 +25,22 @@ npm run build
 
 Static files land in `game/dist/`. Host on GitHub Pages, Netlify, or open `game/dist/index.html` locally.
 
+### Deploy on Cloudflare Pages (free)
+
+Connect the GitHub repo, then use:
+
+| Setting | Value |
+|---------|--------|
+| **Path** (project root) | `game` |
+| **Build command** | `npm run build` |
+| **Build output directory** | `dist` |
+
+Use `dist`, **not** `game/dist`. Cloudflare already runs inside the `game` folder, so the output path is relative to that.
+
+`game/wrangler.toml` pins the output directory if the dashboard field is left blank.
+
+After deploy, open the `*.pages.dev` URL (site root `/`, not `/game`).
+
 ## Project layout
 
 ```
